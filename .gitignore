@@ -38,3 +38,6 @@ terraform.rc
 
 # Ignore AWS credentials file
 .credentials-terraform.sh
+
+# Ignore plano
+./plano
