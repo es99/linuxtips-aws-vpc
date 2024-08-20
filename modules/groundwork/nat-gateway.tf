@@ -24,7 +24,7 @@ resource "aws_eip" "nat-gw-zone-c" {
 
 resource "aws_nat_gateway" "gw-zona-a" {
   allocation_id = aws_eip.nat-gw-zone-a.id
-  subnet_id     = "subnet-02bd0f467e844038e"
+  subnet_id     = aws_subnet.public_subnet[0].id
 
   tags = {
     Name = format("nat-gw-%sa", var.vpc_region)
@@ -33,7 +33,7 @@ resource "aws_nat_gateway" "gw-zona-a" {
 
 resource "aws_nat_gateway" "gw-zone-b" {
   allocation_id = aws_eip.nat-gw-zone-b.id
-  subnet_id     = "subnet-0dc48a8e5028f2925"
+  subnet_id     = aws_subnet.public_subnet[1].id
 
   tags = {
     Name = format("nat-gw-%sb", var.vpc_region)
@@ -42,7 +42,7 @@ resource "aws_nat_gateway" "gw-zone-b" {
 
 resource "aws_nat_gateway" "gw-zone-c" {
   allocation_id = aws_eip.nat-gw-zone-c.id
-  subnet_id     = "subnet-09a9fea898b34ebc3"
+  subnet_id     = aws_subnet.public_subnet[2].id
 
   tags = {
     Name = format("nat-gw-%sc", var.vpc_region)

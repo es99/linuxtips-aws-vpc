@@ -23,16 +23,16 @@ resource "aws_route_table" "public_internet_access" {
 }
 
 resource "aws_route_table_association" "public-2a" {
-  subnet_id      = "subnet-02bd0f467e844038e"
+  subnet_id      = aws_subnet.public_subnet[0].id
   route_table_id = aws_route_table.public_internet_access.id
 }
 
 resource "aws_route_table_association" "public-2b" {
-  subnet_id      = "subnet-0dc48a8e5028f2925"
+  subnet_id      = aws_subnet.public_subnet[1].id
   route_table_id = aws_route_table.public_internet_access.id
 }
 
 resource "aws_route_table_association" "public-2c" {
-  subnet_id      = "subnet-09a9fea898b34ebc3"
+  subnet_id      = aws_subnet.public_subnet[2].id
   route_table_id = aws_route_table.public_internet_access.id
 }
