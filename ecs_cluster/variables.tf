@@ -31,3 +31,12 @@ variable "ssm-private-subnet-2b" {
 variable "ssm-private-subnet-2c" {
   type = string
 }
+
+#### Balancer ####
+variable "load_balancer_internal" {
+  type = bool
+}
+
+variable "load_balancer_type" {
+  type = string
+}
