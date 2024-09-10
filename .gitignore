@@ -39,4 +39,4 @@ terraform.rc
 .credentials-terraform.sh
 
 # Ignore plano
-./plano
+./ecs_cluster/plano

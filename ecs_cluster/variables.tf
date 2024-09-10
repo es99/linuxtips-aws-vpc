@@ -40,3 +40,41 @@ variable "load_balancer_internal" {
 variable "load_balancer_type" {
   type = string
 }
+
+##### ECS General #####
+
+variable "nodes_ami" {
+  type = string
+}
+
+variable "node_instance_type" {
+  type = string
+}
+
+variable "node_volume_size" {
+  type = string
+}
+
+variable "node_volume_type" {
+  type = string
+}
+
+variable "cluster_on_demand_min_size" {
+  type = string
+}
+
+variable "cluster_on_demand_max_size" {
+  type = string
+}
+
+variable "cluster_on_demand_desired_size" {
+  type = string
+}
+
+##### Spot Instances #####
+
+variable "cluster_spot_min_size" {}
+
+variable "cluster_spot_max_size" {}
+
+variable "cluster_spot_desired_size" {}
